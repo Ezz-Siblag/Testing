@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Sign Up</h1>
+
+    <form method="post">
+        <div>
+            <label>Username</label><br />
+            <input type="text" asp-for="Username" />
+        </div>
+
+        <div>
+            <label>Email</label><br />
+            <input type="email" asp-for="Email" />
+        </div>
+
+        <div>
+            <label>Password</label><br />
+            <input type="password" asp-for="Password" />
+        </div>
+
+        <div>
+            <label>Confirm Password</label><br />
+            <input type="password" asp-for="ConfirmPassword" />
+        </div>
+
+        <br />
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <p style="color:red">@Model.ErrorMessage</p>
+    <p style="color:green">@Model.SuccessMessage</p>
+</div>

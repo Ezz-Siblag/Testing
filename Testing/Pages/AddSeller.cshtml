@@ -1,0 +1,52 @@
+﻿@page
+@model Testing.Pages.AddSellerModel
+
+<h2>Add Item</h2>
+
+<h3>Seller: </h3>
+
+<form method="post">
+
+    <input type="text"
+           name="BuyerName"
+           placeholder="Buyer Name"
+           required />
+
+    <input type="text"
+           name="DateDropped"
+           placeholder="Date Dropped (e.g. 2026-02-20)"
+           required />
+
+    <input type="number"
+           name="Price"
+           placeholder="Price"
+           required />
+
+    <input type="number"
+           name="HoldingFee"
+           placeholder="Holding Fee"
+           required />
+
+    <input type="text"
+           name="DatePickedUp"
+           placeholder="Date Picked Up"
+           required />
+
+    <input type="text"
+           name="ItemStatus"
+           placeholder="Item Status"
+           required />
+
+    <input type="text"
+           name="DateCashOut"
+           placeholder="Date Cash Out"
+           required />
+
+    <input type="text"
+           name="Placed"
+           placeholder="Placed (Rack 1 etc.)"
+           required />
+
+    <button type="submit">Add Seller</button>
+
+</form>

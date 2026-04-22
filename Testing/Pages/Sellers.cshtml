@@ -1,0 +1,50 @@
+﻿@page
+@model Testing.Pages.SellersModel
+@{
+    ViewData["Title"] = "Sellers";
+}
+
+<h1>Your list of sellers:</h1>
+
+<h6>Search Seller:</h6>
+<form method="get">
+    <input type="text" name="searchTerm" placeholder="Search..." />
+    <button type="submit">Search</button>
+</form>
+
+<br />
+
+<h3>Seller List</h3>
+
+<h5>Seller Foodie Buddy</h5>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Item Number</th>
+            <th>Buyer Name</th>
+            <th>Date Dropped</th>
+            <th>Price</th>
+            <th>Holding Fee</th>
+            <th>Date Picked Up</th>
+            <th>Item Status</th>
+            <th>Date Cash Out</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sel in Model.SellerList)
+        {
+            <tr>
+                <td>@sel.ItemNumber</td>
+                <td>@sel.BuyerName</td>
+                <td>@sel.DateDropped</td>
+                <td>@sel.Price</td>
+                <td>@sel.HoldingFee</td>
+                <td>@sel.DatePickedUp</td>
+                <td>@sel.ItemStatus</td>
+                <td>@sel.DateCashOut</td>
+                <td>@sel.Placed</td>
+            </tr>
+        }
+    </tbody>
+</table>
